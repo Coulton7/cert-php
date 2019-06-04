@@ -9,7 +9,7 @@ header('Content-Type: text/html; charset= utf-8');
 $userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'];
 //echo $userDoc;
 //Captcha Check Start
-require_once dirname(__FILE__) . '/securimage.php';
+require_once dirname(__FILE__) . '/secureimage.php';
 $securimage = new Securimage();
 
 if ($securimage->check($_POST['ct_captcha']) == false) {
