@@ -73,4 +73,4 @@ $img = new Securimage();
 
 $img->show();  // outputs the image and content headers to the browser
 // alternate use:
-$img->show( '/files/cert-images/code-bg.png' );
+$img->show( '/sites/default/files/cert-images/code-bg.png' );
