@@ -1,4 +1,4 @@
-name = cert-php
+name = cert_php
 description = Has the securimage and phpword files for certificate form
 core = 7.x
 
