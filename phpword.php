@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(E_ALL); ini_set('display_errors', 1);
-$file_dir = "/files/filerepository/";
+$file_dir = "/sites/default/files/filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset= utf-8');
@@ -14,7 +14,7 @@ $securimage = new Securimage();
 
 if ($securimage->check($_POST['ct_captcha']) == false) {
 echo '<div class="success">
-<div class="notice"><img src="/files/cert-images/error.png" width="64" height="64" align="absmiddle" />Incorrect security code entered</div>
+<div class="notice"><img src="/sites/default/files/cert-images/error.png" width="64" height="64" align="absmiddle" />Incorrect security code entered</div>
 </div>';
 exit();
 }
@@ -34,7 +34,7 @@ $text = parseWord($userDoc.".doc");//Method 2
 //$html = nl2br(htmlspecialchars($text));
 //$html = preg_replace('/\s\s+/', ' ', $html);
 echo '<div class="success">
-      <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
+      <div class="notice"><img src="/sites/default/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
     </div>
 	<p>'.$text.'</p></br><div class="footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
