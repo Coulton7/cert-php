@@ -1,0 +1,10 @@
+name = cert-php
+description = Has the securimage and phpword files for certificate form
+core = 7.x
+
+files[] = phpword.inc
+files[] = c-phpword.inc
+files[] = excel_reader2.inc
+files[] = secureimage_show.inc
+files[] = secureimage.inc
+files[] = c-secureimage.inc
