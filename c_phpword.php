@@ -101,7 +101,7 @@ else{
 echo '   <div class="success">
       <div class="notice"><img src="/files/cert-images/error.png" width="64" height="64" align="absmiddle" /><strong>�Բ�����</strong>���ǲ����ҵ��Ǹ�֤��</div>
     </div>
-    <������֤���룬���ٴγ��ԣ���<a href="http://www.avtechnology.co.uk/contacts.php">��ϵ����</a>���ֶ���֤��
+    <������֤���룬���ٴγ��ԣ���<a href="https://www.avtreliability.com/contact-us">��ϵ����</a>���ֶ���֤��
 
 <p>&nbsp;</p>';
 
