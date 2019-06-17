@@ -1,7 +1,7 @@
 <?php
 
-error_reporting(E_ALL); ini_set('display_errors', 1);
-$file_dir = "http://beta.thorp2000.co.uk/sites/default/files/filerepository/";
+error_reporting(0);
+$file_dir = "../sites/default/files/filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
