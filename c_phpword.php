@@ -36,7 +36,7 @@ $text = parseWord($userDoc.".doc");//Method 2
 echo '<div class="success">
       <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>�0�6�ɹ���</strong> ֤�������ҵ���</div>
     </div>
-	<p>'.$text.'</p></p></br><div class="footer">����֤�鶨�� <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
+	<p>'.$text.'</p></p></br><div class="cert-footer">����֤�鶨�� <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
 else{
 $text = parseExcel($userDoc.".xls");
@@ -87,7 +87,7 @@ table.excel tbody td {
 <div class="success">
       <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>�ɹ���</strong>֤�������ҵ���</div>
     </div>
-	<p>'.$text.'</p></p></br><div class="footer">����֤�鶨�� <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
+	<p>'.$text.'</p></p></br><div class="cert-footer">����֤�鶨�� <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
 
 
