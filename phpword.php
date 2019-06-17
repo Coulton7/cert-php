@@ -240,7 +240,7 @@ $outtext = preg_replace('/(<br\s*\/?>\s*)+/', "<br>", $outtext);
 
 function parseExcel($userDoc)
 {
-require_once 'excel_reader2.php';
+require_once dirname(__FILE__) . '/excel_reader2.php';
 $data1 = new Spreadsheet_Excel_Reader($userDoc);
 return $data1->dump($row_numbers=false,$col_letters=false);
 }
