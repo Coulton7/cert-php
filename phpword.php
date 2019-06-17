@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0);
+error_reporting(E_ALL); ini_set('display_errors', 1);
 $file_dir = "/sites/default/files/filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
@@ -102,7 +102,7 @@ echo '   <div class="success">
       <div class="notice"><img src="/sites/default/files/cert-images/error.png" width="64" height="64" align="absmiddle" /><strong>Sorry</strong> We couldn\'t find that Certificate</div>
     </div>
     <p><div class="footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'$userDoc'</p>
-   <p>&nbsp;</p>';
+   <p>&nbsp;</p>' ini_get("error_reporting");
 
 }
 
