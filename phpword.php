@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-$file_dir = "/sites/default/files/filerepository/";
+$file_dir = "http://beta.thorp2000.co.uk/sites/default/files/filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
@@ -36,7 +36,7 @@ $text = parseWord($userDoc.".doc");//Method 2
 echo '<div class="success">
       <div class="notice"><img src="/sites/default/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
     </div>
-	<p>'.$text.'</p></br><div class="footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
+	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
 else{
 $text = parseExcel($userDoc.".xls");
@@ -87,7 +87,7 @@ table.excel tbody td {
 <div class="success">
       <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
     </div>
-	<p>'.$text.'</p></br><div class="footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
+	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
 
 
@@ -101,7 +101,7 @@ else{
 echo '   <div class="success">
       <div class="notice"><img src="/sites/default/files/cert-images/error.png" width="64" height="64" align="absmiddle" /><strong>Sorry</strong> We couldn\'t find that Certificate</div>
     </div>
-    <p><div class="footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'.$userDoc.'</p>
+    <p><div class="cert-footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'.$userDoc.'</p>
    <p>&nbsp;</p>';
 
 }
