@@ -101,7 +101,7 @@ else{
 echo '   <div class="success">
       <div class="notice"><img src="/sites/default/files/cert-images/error.png" width="64" height="64" align="absmiddle" /><strong>Sorry</strong> We couldn\'t find that Certificate</div>
     </div>
-    <p><div class="footer">Please check the Certificate number and try again, or please <a href="http://www.avtechnology.co.uk/contacts.php">contact us</a> for a manual validation.</div><p></br></p>
+    <p><div class="footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p></br></p>
    <p>&nbsp;</p>';
 
 }
