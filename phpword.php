@@ -27,7 +27,7 @@ exit();
 
 
 
-if (file_exists($userDoc.".doc") || file_exists($userDoc.".xls")) {
+if (file_exists($userDoc".doc") || file_exists($userDoc".xls")) {
 
 if(file_exists($userDoc.".doc")){
 $text = parseWord($userDoc.".doc");//Method 2
