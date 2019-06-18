@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-$file_dir = "/sites/default/files/filerepository/";
+$file_dir = "http://beta.thorp2000.co.uk/sites/default/files/filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
@@ -27,7 +27,7 @@ exit();
 
 
 
-if (file_exists($userDoc.".doc") || file_exists($userDoc.".xls")) {
+if (is_file($userDoc.".doc") || is_file($userDoc.".xls")) {
 
 if(file_exists($userDoc.".doc")){
 $text = parseWord($userDoc.".doc");//Method 2
