@@ -27,7 +27,7 @@ exit();
 
 
 
-if (is_file($userDoc.".doc") || is_file($userDoc.".xls")) {
+if (file_exists($userDoc.".doc") || file_exists($userDoc.".xls")) {
 
 if(file_exists($userDoc.".doc")){
 $text = parseWord($userDoc.".doc");//Method 2
@@ -89,12 +89,6 @@ table.excel tbody td {
     </div>
 	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
-
-
-
-
-
-
 
 }
 else{
