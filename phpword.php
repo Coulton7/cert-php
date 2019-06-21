@@ -40,50 +40,7 @@ echo '<div class="success">
 }
 else{
 $text = parseExcel($userDoc.".xls");
-echo '<style>
-table.excel {
-	border-style:ridge;
-	border-width: 0px ;
-	border-collapse:collapse;
-	font-family:sans-serif;
-	font-size:14px !important;
-	background: ;
-	margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    width: 800px;
-}
-table.excel thead th, table.excel tbody th {
-	background: transparent;
-	border-style:ridge;
-	border-width: 0px ;
-	text-align: center;
-	vertical-align:bottom;
-
-}
-table.excel tbody th {
-	text-align:center;
-	width:20px;
-	color: #000000;
-}
-table.excel tbody td {
-	vertical-align:bottom;
-	color: #000000;
-}
-table.excel tbody td {
-    padding: 0 3px;
-	border: 0px solid #EEEEEE;
-	color: #000000;
-}
-.excel tbody tr td nobr {
-	width: 0px;
-	height: 10px;
-	letter-spacing: 0px;
-	font-size: 10px;
-	color: #FFF;
-}
-
-</style>
+echo '
 <div class="success">
       <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
     </div>
