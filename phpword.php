@@ -27,9 +27,9 @@ exit();
 
 clearstatcache();
 
-if (file($userDoc.".doc") || file($userDoc.".xls")) {
+if (realpath($userDoc.".doc") || realpath($userDoc.".xls")) {
 
-if(file($userDoc.".doc")){
+if(realpath($userDoc.".doc")){
 $text = parseWord($userDoc.".doc");//Method 2
 //$html = nl2br(htmlspecialchars($text));
 //$html = preg_replace('/\s\s+/', ' ', $html);
