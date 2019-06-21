@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-$file_dir = "http://beta.thorp2000.co.uk/sites/default/files/filerepository/";
+$file_dir = "./filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
@@ -27,9 +27,9 @@ exit();
 
 clearstatcache();
 
-if (file_get_contents($userDoc.".doc") || file_get_contents($userDoc.".xls")) {
+if (file_exists($userDoc.".doc") || file_exists($userDoc.".xls")) {
 
-if(file_get_contents($userDoc.".doc")){
+if(file_exists($userDoc.".doc")){
 $text = parseWord($userDoc.".doc");//Method 2
 //$html = nl2br(htmlspecialchars($text));
 //$html = preg_replace('/\s\s+/', ' ', $html);
