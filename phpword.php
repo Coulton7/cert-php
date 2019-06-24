@@ -35,9 +35,9 @@ function fileExists($userDoc){
 }
 
 
-if (fileExists($userDoc) /**|| fileExists($userDoc.".xls"))**/ {
+if (fileExists($userDoc) || fileExists($userDoc.".xls")) {
 
-/**if(fileExists($userDoc)){**/
+if(fileExists($userDoc)){
 $text = parseWord($userDoc);//Method 2
 //$html = nl2br(htmlspecialchars($text));
 //$html = preg_replace('/\s\s+/', ' ', $html);
@@ -46,7 +46,7 @@ echo '<div class="success">
     </div>
 	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
-/**else{
+else{
 $text = parseExcel($userDoc.".xls");
 echo '<style>
 table.excel {
@@ -96,14 +96,14 @@ table.excel tbody td {
       <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
     </div>
 	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
-}*/
+}
 
 }
 else{
 echo '   <div class="success">
       <div class="notice"><img src="/sites/default/files/cert-images/error.png" width="64" height="64" align="absmiddle" /><strong>Sorry</strong> We couldn\'t find that Certificate</div>
     </div>
-    <p><div class="cert-footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'.$userDoc'</p>
+    <p><div class="cert-footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'.$userDoc.'.doc'.$httpCode'</p>
    <p>&nbsp;</p>';
 
 }
