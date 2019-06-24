@@ -242,7 +242,7 @@ $outtext = preg_replace('/(<br\s*\/?>\s*)+/', "<br>", $outtext);
 
 function parseExcel($userDoc)
 {
-require_once ('http://beta.thorp2000.co.uk/sites/all/modules/cert_php/excel_reader2.php');
+require_once 'excel_reader2.php';
 $data1 = new Spreadsheet_Excel_Reader($userDoc);
 return $data1->dump($row_numbers=false,$col_letters=false);
 }
