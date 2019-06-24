@@ -25,7 +25,6 @@ exit();
 //$userDoc = $file_dir."GB1067402612.doc";
 //$userDoc = $file_dir."GB1067402512";
 
-clearstatcache();
 
 if (file_exists($userDoc.".doc") || file_exists($userDoc.".xls")) {
 
