@@ -6,7 +6,7 @@ $file_dir = "http://beta.thorp2000.co.uk/sites/default/filesfilerepository/";
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
 //$userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'].".doc";
-$userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'].'doc';
+$userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'].'.doc';
 //echo $userDoc;
 //Captcha Check Start
 require_once dirname(__FILE__) . '/secureimage.php';
@@ -103,7 +103,7 @@ else{
 echo '   <div class="success">
       <div class="notice"><img src="/sites/default/files/cert-images/error.png" width="64" height="64" align="absmiddle" /><strong>Sorry</strong> We couldn\'t find that Certificate</div>
     </div>
-    <p><div class="cert-footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'.$userDoc.'.doc'.$httpCode'</p>
+    <p><div class="cert-footer">Please check the Certificate number and try again, or please <a href="https://www.avtreliability.com/contact-us">contact us</a> for a manual validation.</div><p>'.$userDoc '' .$httpCode'</p>
    <p>&nbsp;</p>';
 
 }
