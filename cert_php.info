@@ -1,7 +1,7 @@
 name = cert_php
 description = Has the securimage and phpword files for certificate form
 core = 7.x
-version = 7.x-2.05
+version = 7.x-2.06
 
 files[] = phpword.inc
 files[] = c-phpword.inc

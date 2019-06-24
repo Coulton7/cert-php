@@ -37,7 +37,7 @@ function fileExists($userDoc){
 
 if (fileExists($userDoc) /**|| fileExists($userDoc.".xls"))**/ {
 
-if(fileExists($userDoc)){
+/**if(fileExists($userDoc)){**/
 $text = parseWord($userDoc);//Method 2
 //$html = nl2br(htmlspecialchars($text));
 //$html = preg_replace('/\s\s+/', ' ', $html);
