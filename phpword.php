@@ -26,22 +26,12 @@ exit();
 //$userDoc = $file_dir."GB1067402512";
 
 function fileExists($userDoc){
-  $curl = init($userDoc);
-  curl_setopt($curl, CURLOPT_NOBODY, true);
-  $result = curl_exec($curl);
-
-  $ret = false;
-
-  if($result !== false) {
-    $statusCode= curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-    if($statusCode == 200) {
-      $ret = true;
-    }
-  }
-
-  curl_close($curl);
-  return $ret;
+  $ch = curl_init($userDoc);
+      curl_setopt($ch, CURLOPT_NOBODY, true);
+      curl_exec($ch);
+      $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+      curl_close($ch);
+      if( $httpCode == 200 ){return true;}
 }
 
 
