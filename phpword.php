@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-$file_dir = "../sites/default/files/filerepository/";
+$file_dir = "http://beta.thorp2000.co.uk/sites/default/files/filerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
@@ -242,7 +242,7 @@ $outtext = preg_replace('/(<br\s*\/?>\s*)+/', "<br>", $outtext);
 
 function parseExcel($userDoc)
 {
-require_once '/sites/all/modules/cert-php/excel_reader2.php';
+require_once 'http://beta.thorp2000.co.uk/sites/all/modules/cert-php/excel_reader2.php';
 $data1 = new Spreadsheet_Excel_Reader($userDoc);
 return $data1->dump($row_numbers=false,$col_letters=false);
 }
