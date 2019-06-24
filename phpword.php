@@ -6,7 +6,7 @@ $file_dir = "http://beta.thorp2000.co.uk/sites/default/filesfilerepository/";
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
 //$userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'].".doc";
-$userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'];
+$userDoc = $file_dir.$_POST['prefix'].$_POST['set1'].$_POST['set2'].$_POST['set3'].'doc';
 //echo $userDoc;
 //Captcha Check Start
 require_once dirname(__FILE__) . '/secureimage.php';
