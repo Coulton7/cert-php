@@ -35,7 +35,7 @@ function fileExists($userDoc){
 }
 
 
-if (fileExists($userDoc) || fileExists($userDoc.".xls")) {
+if (fileExists($userDoc) /**|| fileExists($userDoc.".xls"))**/ {
 
 if(fileExists($userDoc)){
 $text = parseWord($userDoc);//Method 2
@@ -46,7 +46,7 @@ echo '<div class="success">
     </div>
 	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
 }
-else{
+/**else{
 $text = parseExcel($userDoc.".xls");
 echo '<style>
 table.excel {
@@ -96,7 +96,7 @@ table.excel tbody td {
       <div class="notice"><img src="/files/cert-images/success.png" width="64" height="64" align="absmiddle" /><strong>Success!</strong> Certificate Data Found</div>
     </div>
 	<p>'.$text.'</p></br><div class="cert-footer">Certificate of adequacy is defined in <a href="http://www.legislation.gov.uk/uksi/1992/3073/regulation/20/made" target="_new">\'The Supply of Machinery (Safety) Regulations 1992\'</a></div><p></br></p>';
-}
+}*/
 
 }
 else{
