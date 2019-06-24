@@ -25,8 +25,8 @@ exit();
 //$userDoc = $file_dir."GB1067402612.doc";
 //$userDoc = $file_dir."GB1067402512";
 
-function fileExists($userDoc){
-  $ch = curl_init($userDoc);
+function fileExists($url){
+  $ch = curl_init($url);
       curl_setopt($ch, CURLOPT_NOBODY, true);
       curl_exec($ch);
       $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
