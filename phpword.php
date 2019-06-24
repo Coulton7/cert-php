@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-$file_dir = "./filerepository/";
+$file_dir = "http://beta.thorp2000.co.uk/sites/default/filesfilerepository/";
 
 //DONT CHANGE ANYTHING BELOW HERE--------------------------------------------------------------------------------------------------------------------
 header('Content-Type: text/html; charset=iso-8859-1');
@@ -25,10 +25,29 @@ exit();
 //$userDoc = $file_dir."GB1067402612.doc";
 //$userDoc = $file_dir."GB1067402512";
 
+function fileExists($userDoc){
+  $curl = init($userDoc);
+  curl_setopt($curl, CURLOPT_NOBODY, true);
+  $result = curl_exec($curl);
 
-if (file_exists($userDoc.".doc") || file_exists($userDoc.".xls")) {
+  $ret = false;
 
-if(file_exists($userDoc.".doc")){
+  if($result !== false) {
+    $statusCode= curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+    if($statusCode == 200) {
+      $ret = true;
+    }
+  }
+
+  curl_close($curl);
+  return $ret;
+}
+
+
+if (fileExists($userDoc.".doc") || fileExists($userDoc.".xls")) {
+
+if(fileExists($userDoc.".doc")){
 $text = parseWord($userDoc.".doc");//Method 2
 //$html = nl2br(htmlspecialchars($text));
 //$html = preg_replace('/\s\s+/', ' ', $html);
