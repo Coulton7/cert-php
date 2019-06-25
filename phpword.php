@@ -108,7 +108,6 @@ echo '   <div class="success">
 
 }
 
-
 /*****************************************************************
 This approach uses detection of NUL (chr(00)) and end line (chr(13))
 to decide where the text is:
@@ -118,14 +117,10 @@ to decide where the text is:
 - clean up with a regular expression
 *****************************************************************/
 
-
-
-
-
 function parseWord($userDoc)
 {
     $fileHandle = fopen($userDoc, "r");
-    $word_text = @fread($fileHandle, filesize($userDoc));
+    $word_text = fread($fileHandle, filesize($userDoc));
     $line = ""; $lineord = "";
     $tam = filesize($userDoc);
     $nulos = 0;
@@ -221,15 +216,9 @@ function parseWord($userDoc)
 		//$new_line = preg_replace('~(^<br>\s*)|((?<=<br>)\s*<br>)|(<br>\s*$)~', '', $new_line);
 		//
 
-
 		$outtext .= nl2br($new_line);
 
-
-
  // nl2br($new_line);
-
-
-
     }
 $outtext = str_replace("\r","",$outtext);
 $outtext = str_replace("\n","",$outtext);
