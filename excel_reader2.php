@@ -93,9 +93,9 @@ function v($data,$pos) {
 	return ord($data[$pos]) | ord($data[$pos+1])<<8;
 }
 
-class OLEConstructor {
+class OLERead {
 	var $data = '';
-	function OLERead(){	}
+	//function OLERead(){	}
 
 	function read($sFileName){
 		// check if file exist and is readable (Darko Miljanovic)
@@ -310,7 +310,7 @@ define('SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT',	"%s");
 /*
 * Main Class
 */
-class Spreadsheet_Excel_Reader_Constructor {
+class Spreadsheet_Excel_Reader {
 
 	// MK: Added to make data retrieval easier
 	var $colnames = array();
@@ -913,8 +913,8 @@ class Spreadsheet_Excel_Reader_Constructor {
 	 *
 	 * Some basic initialisation
 	 */
-	function Spreadsheet_Excel_Reader($file='',$store_extended_info=true,$outputEncoding='') {
-		$this->_ole = new OLEConstructor();
+	/*function Spreadsheet_Excel_Reader($file='',$store_extended_info=true,$outputEncoding='') {
+		$this->_ole = new OLERead();
 		$this->setUTFEncoder('iconv');
 		if ($outputEncoding != '') {
 			$this->setOutputEncoding($outputEncoding);
@@ -928,7 +928,24 @@ class Spreadsheet_Excel_Reader_Constructor {
 		if ($file!="") {
 			$this->read($file);
 		}
-	}
+	}*/
+
+	public function __construct($file='',$store_extended_info=true,$outputEncoding='') {
+$this->_ole = new OLERead();
+$this->setUTFEncoder('iconv');
+if ($outputEncoding != '') {
+$this->setOutputEncoding($outputEncoding);
+}
+for ($i=1; $i<245; $i++) {
+$name = strtolower(( (($i-1)/26>=1)?chr(($i-1)/26+64):'') . chr(($i-1)%26+65));
+$this->colnames[$name] = $i;
+$this->colindexes[$i] = $name;
+}
+$this->store_extended_info = $store_extended_info;
+if ($file!="") {
+$this->read($file);
+}
+}
 
 	/**
 	 * Set the encoding method
