@@ -912,7 +912,8 @@ class Spreadsheet_Excel_Reader_Constructor {
 	 * Some basic initialisation
 	 */
 	function Spreadsheet_Excel_Reader($file='',$store_extended_info=true,$outputEncoding='') {
-		$this->_ole = new OLEConstructor();
+		$t = new OLEConstructor();
+		$this->_ole =& $t;
 		$this->setUTFEncoder('iconv');
 		if ($outputEncoding != '') {
 			$this->setOutputEncoding($outputEncoding);
