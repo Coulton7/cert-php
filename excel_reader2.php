@@ -93,7 +93,7 @@ function v($data,$pos) {
 	return ord($data[$pos]) | ord($data[$pos+1])<<8;
 }
 
-class OLERead {
+class OLEConstructor {
 	var $data = '';
 	function OLERead(){	}
 
@@ -310,7 +310,7 @@ define('SPREADSHEET_EXCEL_READER_DEF_NUM_FORMAT',	"%s");
 /*
 * Main Class
 */
-class Spreadsheet_Excel_Reader {
+class Spreadsheet_Excel_Reader_Constructor {
 
 	// MK: Added to make data retrieval easier
 	var $colnames = array();
@@ -914,7 +914,7 @@ class Spreadsheet_Excel_Reader {
 	 * Some basic initialisation
 	 */
 	function Spreadsheet_Excel_Reader($file='',$store_extended_info=true,$outputEncoding='') {
-		$this->_ole = new OLERead();
+		$this->_ole = new OLEConstructor();
 		$this->setUTFEncoder('iconv');
 		if ($outputEncoding != '') {
 			$this->setOutputEncoding($outputEncoding);
