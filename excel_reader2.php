@@ -1118,7 +1118,8 @@ class Spreadsheet_Excel_Reader_Constructor {
 								$spos += $len;
 							}
 						}
-						$retstr = ($asciiEncoding) ? $retstr : $this->_encodeUTF16($retstr);
+						$retstr = ($asciiEncoding) ? iconv('iso-8859-1', 'utf-8', $retstr) : $this->_encodeUTF16($retstr);
+
 
 						if ($richString){
 							$spos += 4 * $formattingRuns;
