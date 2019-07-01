@@ -101,7 +101,7 @@ class OLEConstructor {
 			$this->error = 1;
 			return false;
 		}
-		$this->data = @file_get_contents($sFileName);
+		$this->data = file_get_contents($sFileName);
 		if (!$this->data) {
 			$this->error = 1;
 			return false;
